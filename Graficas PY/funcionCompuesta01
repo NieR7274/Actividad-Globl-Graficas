@@ -1,0 +1,40 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Dominio para x
+x = np.linspace(-5, 5, 1000)
+
+# Funciones originales
+def f(x):
+    return 1 / (1 + np.exp(-x))  # Sigmoide
+
+def g(x):
+    return np.log(1 + np.exp(x))  # SoftPlus
+
+# Composiciones
+f_of_g = f(g(x))  # f ∘ g
+g_of_f = g(f(x))  # g ∘ f
+
+# Crear figura
+plt.figure(figsize=(12, 6))
+
+# Graficar f ∘ g
+plt.subplot(1, 2, 1)
+plt.plot(x, f_of_g, color='blue', label='f∘g')
+plt.title('Composición f∘g')
+plt.xlabel('x')
+plt.ylabel('f(g(x))')
+plt.grid(True)
+plt.legend()
+
+# Graficar g ∘ f
+plt.subplot(1, 2, 2)
+plt.plot(x, g_of_f, color='green', label='g∘f')
+plt.title('Composición g∘f')
+plt.xlabel('x')
+plt.ylabel('g(f(x))')
+plt.grid(True)
+plt.legend()
+
+plt.tight_layout()
+plt.show()

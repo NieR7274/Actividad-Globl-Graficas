@@ -1,0 +1,95 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+funciones = {
+    "Cuadrática": {
+        "f": lambda x: x**2,
+        "dominio": "ℝ",
+        "rango": "[0, ∞)",
+        "formula": "f(x) = x²",
+        "x": np.linspace(-5, 5, 500)
+    },
+    "Cúbica": {
+        "f": lambda x: x**3,
+        "dominio": "R",
+        "rango": "R",
+        "formula": "f(x) = x³",
+        "x": np.linspace(-5, 5, 500)
+    },
+    "Polinomial": {
+        "f": lambda x: x**4 - x**2 + 2,
+        "dominio": "R",
+        "rango": "[≈1.75, ∞)",
+        "formula": "f(x) = x⁴ - x² + 2",
+        "x": np.linspace(-3, 3, 500)
+    },
+    "Racional": {
+        "f": lambda x: 1/x,
+        "dominio": "R \\ {0}",
+        "rango": "R \\ {0}",
+        "formula": "f(x) = 1/x",
+        "x": np.linspace(-5, 5, 500)[np.linspace(-5, 5, 500) != 0]
+    },
+    "Exponencial": {
+        "f": lambda x: np.exp(x),
+        "dominio": "R",
+        "rango": "(0, ∞)",
+        "formula": "f(x) = e^x",
+        "x": np.linspace(-3, 3, 500)
+    },
+    "Logarítmica": {
+        "f": lambda x: np.log(x),
+        "dominio": "(0, ∞)",
+        "rango": "R",
+        "formula": "f(x) = ln(x)",
+        "x": np.linspace(0.1, 5, 500)
+    },
+    "Seno": {
+        "f": lambda x: np.sin(x),
+        "dominio": "R",
+        "rango": "[-1, 1]",
+        "formula": "f(x) = sin(x)",
+        "x": np.linspace(-2*np.pi, 2*np.pi, 500)
+    },
+    "Coseno": {
+        "f": lambda x: np.cos(x),
+        "dominio": "R",
+        "rango": "[-1, 1]",
+        "formula": "f(x) = cos(x)",
+        "x": np.linspace(-2*np.pi, 2*np.pi, 500)
+    },
+    "Tangente": {   
+        "f": lambda x: np.tan(x),
+        "dominio": "R \\ {π/2 + kπ, k∈Z}",
+        "rango": "R",
+        "formula": "f(x) = tan(x)",
+        "x": np.linspace(-np.pi/2+0.1, np.pi/2-0.1, 500)
+    }
+}
+
+for nombre, datos in funciones.items():
+    print(f"\n{nombre}")
+    print(f"Regla: {datos['formula']}")
+    print(f"Dominio: {datos['dominio']}")
+    print(f"Rango: {datos['rango']}")
+
+n = len(funciones)
+cols = 3
+rows = int(np.ceil(n / cols))
+
+fig, axes = plt.subplots(rows, cols, figsize=(15, 12))
+fig.suptitle("Funciones clásicas", fontsize=16)
+
+for ax, (nombre, datos) in zip(axes.flatten(), funciones.items()):
+    x = datos["x"]
+    y = datos["f"](x)
+    ax.plot(x, y, label=datos["formula"])
+    ax.set_title(nombre)
+    ax.grid(True)
+    ax.legend()
+
+for ax in axes.flatten()[n:]:
+    ax.axis("off")
+
+plt.tight_layout(rect=[0, 0, 1, 0.96])
+plt.show()
