@@ -25,7 +25,7 @@ Gráficas incluidas:
    Graficación de la composición de funciones f ◦ g y g ◦ f, para mostrar dominio e imagen.
 
 6. FuncionesEnR4:
-   Representación de un espacio en cuatro dimensiones (R4). para visualizar R4 se requirió el uso de herramientas de Inteligencia Artificial .
+   Representación de un espacio en cuatro dimensiones (R4).
 
 7. GraficoCaballo:
    Para el problema del Knight’s Tour en un tablero de ajedrez 4x4, la gráfica asociada y su visualización se elaboraron con ayuda de la IA, principalmente para definir las transiciones entre casillas y mostrar el grafo correspondiente.
@@ -37,4 +37,4 @@ Objetivo:
 El uso de estas gráficas tiene como propósito complementar el análisis teórico de la tarea con una parte visual, que sirva para entender de forma más intuitiva los conceptos abordados.
 
 APOYO:
-Elaboración individual con apoyo parcial de Inteligencia Artificial, especialmente en FuncionesEnR4 y GraficoCaballo.
+Elaboración individual con apoyo parcial de Inteligencia Artificial, GraficoCaballo.
