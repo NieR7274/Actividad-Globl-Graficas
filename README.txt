@@ -1,4 +1,4 @@
-Actividad Global 1, MCA1, 1er Periodo
+ Actividad Global 1, MCA1, 1er Periodo
 Profesor: Roberto Méndez Méndez
 Ayudante: Emiliano Macias Dávalos
 Alumno: Ángel Aarón López Cruz
@@ -37,4 +37,4 @@ Objetivo:
 El uso de estas gráficas tiene como propósito complementar el análisis teórico de la tarea con una parte visual, que sirva para entender de forma más intuitiva los conceptos abordados.
 
 APOYO:
-Elaboración individual con apoyo parcial de Inteligencia Artificial, GraficoCaballo.
+Elaboración individual con apoyo parcial de Inteligencia Artificial en  GraficoCaballo.
